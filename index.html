@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TO-DO-LIST</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Ionicon untuk ikon daun -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <!-- 1. HALAMAN UTAMA / WELCOME PAGE -->
+        <div id="welcome-page" class="welcome-container">
+            <h1 class="main-title">TO DO LIST</h1>
+            <div class="image-box">
+                <img src="assets/welcome-page.png" alt="todolist" class="todo-welcome-image">
+            </div>
+            <button id="start-btn" class="start-button">START</button>
+        </div>
+
+        <!-- 2. HALAMAN LOGIN -->
+        <div id="login-page" class="welcome-container hidden">
+            <h1 class="main-title">LOGIN ANGGOTA</h1>
+            <div class="image-box" style="padding: 25px; width: 300px; text-align: left;">
+                <label style="color: #4a5d4e; font-weight: bold; display: block; margin-bottom: 5px;">Username / Nama:</label>
+                <input type="text" id="username-input" placeholder="Masukkan nama kamu..." style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;">
+                
+                <label style="color: #4a5d4e; font-weight: bold; display: block; margin-bottom: 5px;">PIN (4 Angka):</label>
+                <input type="password" id="pin-input" maxlength="4" placeholder="Masukkan PIN rahasia..." style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;">
+                
+                <button id="login-btn" class="start-button" style="width: 100%;">MASUK</button>
+            </div>
+        </div>
+
+        <!-- 3. HALAMAN DASHBOARD -->
+        <div id="dashboard-page" class="dashboard-container hidden">
+            <!-- BAGIAN ATAS: Kalender & Progression Bar -->
+            <div class="top-section">
+                <!-- Date Box Interaktif dengan Trigger JS -->
+                <div class="date-box" id="date-box-trigger" style="cursor: pointer;">
+                    <input type="date" id="date-picker-input" style="display: none;" />
+                    <span id="day-text">Thursday</span>
+                    <div class="date-circle">
+                        <span id="date-number">13</span>
+                    </div>
+                    <span id="month-text">February</span>
+                </div>
+
+                <div class="progression-card">
+                    <span class="progression-title">Progression</span>
+                    <div class="progress-bar-bg">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BAGIAN INPUT TUGAS -->
+            <div class="input-section">
+                <input type="text" id="task-input" placeholder="Write your task here...">
+                <button id="add-task-btn">+</button>
+            </div>
+
+            <!-- BAGIAN DAFTAR TUGAS -->
+            <div class="task-list-card">
+                <ul id="task-list" class="task-list">
+                    <!-- Nanti list tugas muncul di sini -->
+                </ul>
+            </div>
+
+            <!-- TOMBOL FINISH -->
+            <button id="finish-btn" class="finish-button">FINISH</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
