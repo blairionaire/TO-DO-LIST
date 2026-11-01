@@ -1,177 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>TO-DO-LIST</title>
-
     <link rel="stylesheet" href="style.css">
-
-    <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
 </head>
-
 <body>
-
-    <!-- WELCOME PAGE -->
-
     <div id="welcome-page" class="welcome-container">
-
         <h1 class="main-title">TO DO LIST</h1>
-
         <div class="image-box">
-
-            <img
-                src="assets/welcome-page.png"
-                alt="todolist"
-                class="todo-welcome-image"
-            >
-
+            <img src="assets/welcome-page.png" alt="todolist" class="todo-welcome-image">
         </div>
-
-        <button id="start-btn" class="start-button">
-            START
-        </button>
-
+        <button id="start-btn" class="start-button">START</button>
     </div>
-
-
-    <!-- LOGIN PAGE -->
 
     <div id="login-page" class="welcome-container hidden">
-
         <h1 class="main-title">LOGIN ANGGOTA</h1>
-
         <div class="image-box login-box">
-
-            <label for="username-input">
-                Username / Nama:
-            </label>
-
-            <input
-                type="text"
-                id="username-input"
-                placeholder="Masukkan nama kamu..."
-            >
-
-            <label for="pin-input">
-                PIN (4 Angka):
-            </label>
-
-            <input
-                type="password"
-                id="pin-input"
-                maxlength="4"
-                inputmode="numeric"
-                placeholder="Masukkan PIN rahasia..."
-            >
-
-            <button id="login-btn" class="start-button login-button">
-                MASUK
-            </button>
-
+            <label for="username-input">Username / Nama:</label>
+            <input type="text" id="username-input" placeholder="Masukkan nama kamu...">
+            <label for="pin-input">PIN (4 Angka):</label>
+            <input type="password" id="pin-input" maxlength="4" inputmode="numeric" placeholder="Masukkan PIN rahasia...">
+            <button id="login-btn" class="start-button login-button">MASUK</button>
         </div>
-
     </div>
 
-
-    <!-- DASHBOARD PAGE -->
-
     <div id="dashboard-page" class="dashboard-container hidden">
-
-        <!-- DATE AND PROGRESS -->
-
         <div class="top-section">
-
-            <!-- DATE BOX -->
-
             <div class="date-box" id="date-box">
-
                 <span id="day-text">Sunday</span>
-
                 <div class="date-circle">
                     <span id="date-number">09</span>
                 </div>
-
                 <span id="month-text">November</span>
-
-                <input
-                    type="date"
-                    id="date-picker-input"
-                    class="native-date-input"
-                    aria-label="Pilih tanggal"
-                >
-
+                <input type="date" id="date-picker-input" class="native-date-input" aria-label="Pilih tanggal">
             </div>
-
-
-            <!-- PROGRESSION CARD -->
 
             <div class="progression-card">
-
-                <span class="progression-title">
-                    Progression
-                </span>
-
+                <span class="progression-title">Progression</span>
                 <div class="progress-bar-bg">
-
-                    <div
-                        id="progress-fill"
-                        class="progress-fill"
-                    ></div>
-
+                    <div id="progress-fill" class="progress-fill"></div>
                 </div>
-
             </div>
-
         </div>
-
-
-        <!-- INPUT TASK -->
 
         <div class="input-section">
-
-            <input
-                type="text"
-                id="task-input"
-                placeholder="Write your task here..."
-                maxlength="150"
-            >
-
-            <button id="add-task-btn">
-                +
-            </button>
-
+            <input type="text" id="task-input" placeholder="Write your task here..." maxlength="150">
+            <button id="add-task-btn">+</button>
         </div>
-
-
-        <!-- TASK LIST -->
 
         <div class="task-list-card">
-
             <ul id="task-list" class="task-list">
-
             </ul>
-
         </div>
 
-
-        <!-- FINISH BUTTON -->
-
-        <button id="finish-btn" class="finish-button">
-            FINISH
-        </button>
-
+        <button id="finish-btn" class="finish-button">FINISH</button>
     </div>
 
-
-    <!-- JAVASCRIPT -->
-
     <script src="script.js"></script>
-
 </body>
 </html>
