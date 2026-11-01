@@ -227,4 +227,18 @@ function updateProgress(completed, total) {
 // Tombol FINISH
 finishBtn.addEventListener("click", function () {
   alert("Kerja bagus! Hari ini produktif sekali. 🎉");
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const dateInput = document.querySelector("input[type='date']");
+
+    if (dateInput) {
+      dateInput.addEventListener("click", () => {
+        try {
+          dateInput.showPicker();
+        } catch (error) {
+          console.log("Browser tidak mendukung showPicker otomatis");
+        }
+      });
+    }
+  });
 });
